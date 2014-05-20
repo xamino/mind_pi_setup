@@ -1,0 +1,34 @@
+#! /bin/sh
+# /etc/init.d/wlan-monitor
+
+### BEGIN INIT INFO
+# Provides:          wlan-monitor
+# Required-Start:    $network $syslog
+# Required-Stop:     
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Simple script to start a program at boot
+# Description:       A simple script from www.stuffaboutcode.com which will start / stop a program a boot / shutdown.
+### END INIT INFO
+
+# If you want a command to always run, put it here
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Enabling monitor mode on channel 6"
+    ifconfig wlan0 down
+    /usr/local/sbin/airmon-ng start wlan0 6
+    iwconfig mon0 channel 6
+    ;;
+  stop)
+    echo "Stopping monitor mode"
+    /usr/local/sbin/airmon-ng stop mon0
+    ;;
+  *)
+    echo "Usage: /etc/init.d/noip {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0 
