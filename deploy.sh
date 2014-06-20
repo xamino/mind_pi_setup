@@ -2,7 +2,7 @@
 
 echo "installing stuff"
 sudo apt-get update
-sudo apt-get install -qy iw tcpdump ifrename iceweasel hostapd
+sudo apt-get install -qy iw tcpdump ifrename iceweasel hostapd matchbox nodm
 echo "setup connection"
 sudo cp iftab /etc/iftab
 sudo cp interfaces /etc/network/interfaces
@@ -28,8 +28,16 @@ echo "setup touch input"
 sudo cp modules /etc/modules
 
 #copy link
-echo "install link"
-sudo cp MIND.html /home/pi/Desktop/MIND.html
+#echo "install link"
+#sudo cp MIND.html /home/pi/Desktop/MIND.html
+
+#kiosk mode
+echo "init kiosk mode"
+sudo cp nodm /etc/default/nodm
+sudo cp .xsession /home/pi/.xsession
+sudo cp iceweasel.conf /home/pi/iceweasel.conf
+#kiosk mode - r-kiosk plugin
+sudo cp -r {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d} /usr/lib/iceweasel/browser/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
 
 # reboot
 echo "reboot!"
