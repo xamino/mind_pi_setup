@@ -37,7 +37,7 @@ sudo cp nodm /etc/default/nodm
 sudo cp .xsession /home/pi/.xsession
 sudo cp iceweasel.conf /home/pi/iceweasel.conf
 #kiosk mode - r-kiosk plugin
-sudo cp -r {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d} /usr/lib/iceweasel/browser/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}
+sudo cp -r {4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B} /usr/lib/iceweasel/browser/extensions/{4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B}
 
 # reboot
 echo "reboot!"
