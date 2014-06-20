@@ -38,6 +38,9 @@ disable_overscan=1
 sdtv_mode=2
 
 #uncomment to overclock the arm. 700 MHz is the default.
-#arm_freq=800
+arm_freq=950
 
 # for more options see http://elinux.org/RPi_config.txt
+core_freq=250
+sdram_freq=450
+over_voltage=6
