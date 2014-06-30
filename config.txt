@@ -16,8 +16,9 @@ disable_overscan=1
 # overscan.
 #framebuffer_width=1280
 #framebuffer_height=720
-#1920
-#1080
+framebuffer_width=1920
+framebuffer_height=1080
+hdmi_pixel_encoding=1
 
 # uncomment if hdmi display is not detected and composite is being output
 #hdmi_force_hotplug=1
