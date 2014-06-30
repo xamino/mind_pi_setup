@@ -25,7 +25,7 @@ wlan1 mac 00:0f:12:89:0a:94
 wlan0 mac 00:aa:ab:02:31:96
 wlan1 mac 00:0f:12:89:0a:5a
 
-#340  - Michael Weber
+#340  - Weber
 wlan0 mac 00:aa:ab:02:30:cb
 wlan1 mac 00:0f:12:89:11:42	
 
@@ -37,7 +37,7 @@ wlan1 mac 00:0f:12:89:0a:01
 wlan0 mac 00:aa:ab:02:31:94
 wlan1 mac 00:0f:12:89:02:37
 
-#3304 - Michael Haug
+#3304 - Haug
 wlan0 mac 00:aa:ab:02:32:06
 wlan1 mac 00:0f:12:89:10:45
 
