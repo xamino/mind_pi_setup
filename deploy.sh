@@ -48,6 +48,8 @@ sudo rm -f /etc/profile.d/boottoscratch.sh
 sudo cp autostart /etc/xdg/lxsession/LXDE/autostart
 # disable screensaver (try 2)
 sudo cp xinitrc /etc/X11/xinit/xinitrc
+# disable screensaver (try 3)
+sudo cp config /etc/kbd/config
 
 # reboot
 echo "reboot!"
