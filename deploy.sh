@@ -46,6 +46,8 @@ sudo update-rc.d lightdm disable 2
 sudo rm -f /etc/profile.d/boottoscratch.sh
 # disable screensaver (try 1)
 sudo cp autostart /etc/xdg/lxsession/LXDE/autostart
+# disable screensaver (try 2)
+sudo cp xinitrc /etc/X11/xinit/xinitrc
 
 # reboot
 echo "reboot!"
