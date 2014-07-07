@@ -35,7 +35,7 @@ sudo cp modules /etc/modules
 echo "init kiosk mode"
 sudo apt-get install iceweasel matchbox nodm
 sudo cp nodm /etc/default/nodm
-sudo cp .xsession /home/pi/.xsession
+sudo cp xsession /home/pi/.xsession
 sudo cp iceweasel.conf /home/pi/iceweasel.conf
 #kiosk mode - r-kiosk plugin
 sudo cp -r {4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B} /usr/lib/iceweasel/browser/extensions/{4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B}
