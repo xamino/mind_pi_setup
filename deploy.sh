@@ -44,6 +44,8 @@ sudo cp -r {4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B} /usr/lib/iceweasel/browser/ext
 sudo update-rc.d lightdm disable 2
 #remove boottoscratch (if exists)
 sudo rm -f /etc/profile.d/boottoscratch.sh
+# disable screensaver (try 1)
+sudo cp autostart /etc/xdg/lxsession/LXDE/autostart
 
 # reboot
 echo "reboot!"
