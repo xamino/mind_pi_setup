@@ -2,7 +2,7 @@
 
 echo "installing stuff"
 sudo apt-get update
-sudo apt-get install -qy iw tcpdump ifrename iceweasel hostapd
+sudo apt-get install -qy iw tcpdump ifrename hostapd
 echo "setup connection"
 sudo cp iftab /etc/iftab
 sudo cp interfaces /etc/network/interfaces
@@ -28,8 +28,29 @@ echo "setup touch input"
 sudo cp modules /etc/modules
 
 #copy link
-echo "install link"
-sudo cp MIND.html /home/pi/Desktop/MIND.html
+#echo "install link"
+#sudo cp MIND.html /home/pi/Desktop/MIND.html
+
+#kiosk mode
+echo "init kiosk mode"
+sudo apt-get install iceweasel matchbox nodm
+sudo cp nodm /etc/default/nodm
+# also disables screensaver (try 4) --> words!
+sudo cp xsession /home/pi/.xsession
+sudo cp iceweasel.conf /home/pi/iceweasel.conf
+#kiosk mode - r-kiosk plugin
+sudo cp -r {4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B} /usr/lib/iceweasel/browser/extensions/{4D498D0A-05AD-4fdb-97B5-8A0AABC1FC5B}
+#raspi-config procedure
+#set to console-boot
+sudo update-rc.d lightdm disable 2
+#remove boottoscratch (if exists)
+sudo rm -f /etc/profile.d/boottoscratch.sh
+# disable screensaver (try 1)
+sudo cp autostart /etc/xdg/lxsession/LXDE/autostart
+# disable screensaver (try 2)
+sudo cp xinitrc /etc/X11/xinit/xinitrc
+# disable screensaver (try 3)
+sudo cp config /etc/kbd/config
 
 # reboot
 echo "reboot!"
