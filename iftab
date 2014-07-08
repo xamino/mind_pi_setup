@@ -1,17 +1,20 @@
 #wlan0 = monitor mode interface
 #wlan1 = welcome connection interface
 
-#3302 - 3D Druckraum
-wlan0 mac 00:aa:ab:02:2b:82
-wlan1 mac 00:0f:12:89:14:3a
+#neu
+wlan1 mac 00:87:33:41:96:e3
+
 
 #3305 - Bastian/Bjoern
 wlan0 mac 00:aa:ab:02:2d:69
-wlan1 mac 00:0f:12:89:0f:d1
+wlan1 mac 00:0f:12:89:0a:5a
 
-#336  - Florian/Florian
+#336  - Katrin/Florian
 wlan0 mac 00:aa:ab:02:32:0a
 wlan1 mac 00:0f:54:0c:4c:25
+
+#3302 - David, Philipp, Jan
+
 
 #3303 - Julian/Christian
 wlan0 mac 00:aa:ab:02:31:b0
@@ -21,23 +24,30 @@ wlan1 mac 00:0f:12:89:10:ca
 wlan0 mac 00:aa:ab:02:2a:2b
 wlan1 mac 00:0f:12:89:0a:94
 
-#339  - Claudia
-wlan0 mac 00:aa:ab:02:31:96
-wlan1 mac 00:0f:12:89:0a:5a
-
 #340  - Michael Weber
 wlan0 mac 00:aa:ab:02:30:cb
 wlan1 mac 00:0f:12:89:11:42	
 
-#337 - (Wesam)
-wlan0 mac 00:aa:ab:02:2d:7e
-wlan1 mac 00:0f:12:89:0a:01
+#337 - Julia
+wlan0 mac 00:aa:ab:02:32:06
+# todo other antenna
+wlan1 mac 00:aa:ab:02:2d:7e
 
 #331  - Seminarraum
 wlan0 mac 00:aa:ab:02:31:94
 wlan1 mac 00:0f:12:89:02:37
 
-#3304 - Michael Haug
-wlan0 mac 00:aa:ab:02:32:06
+#332
 wlan1 mac 00:0f:12:89:10:45
 
+
+
+#fehlen
+#wlan1 mac 00:0f:12:89:0f:d1
+
+#wlan0 mac 00:aa:ab:02:31:96
+
+#wlan0 mac 00:aa:ab:02:2b:82
+#wlan1 mac 00:0f:12:89:14:3a
+
+#wlan1 mac 00:0f:12:89:0a:01
