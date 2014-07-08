@@ -14,7 +14,7 @@ wlan0 mac 00:aa:ab:02:32:0a
 wlan1 mac 00:0f:54:0c:4c:25
 
 #3302 - David, Philipp, Jan
-
+wlan1 mac 00:0f:12:89:0f:d1
 
 #3303 - Julian/Christian
 wlan0 mac 00:aa:ab:02:31:b0
@@ -43,11 +43,9 @@ wlan1 mac 00:0f:12:89:10:45
 
 
 #fehlen
-#wlan1 mac 00:0f:12:89:0f:d1
-
 #wlan0 mac 00:aa:ab:02:31:96
 
-#wlan0 mac 00:aa:ab:02:2b:82
+#wlan0 mac 00:aa:ab:02:2b:82 ist da, nicht verwendet (stick ohne kappe)
 #wlan1 mac 00:0f:12:89:14:3a
 
 #wlan1 mac 00:0f:12:89:0a:01
