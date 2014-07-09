@@ -18,3 +18,4 @@ iface wlan1 inet dhcp
 
 #iface default inet dhcp
 
+pre-up iptables-restore < /etc/network/iptables

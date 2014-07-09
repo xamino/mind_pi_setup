@@ -7,7 +7,9 @@ sleep 2;
 sudo iptables -F
 sudo iptables -P INPUT DROP
 sudo iptables -A INPUT -s 134.60.0.0/16 -p tcp -j ACCEPT
+sudo iptables -A INPUT -s 134.60.0.0/16 -p udp -j ACCEPT
 sudo iptables -A INPUT -s 134.60.0.0/16 -p icmp -j ACCEPT
+sudo iptables-save > /etc/network/iptables
 
 echo "Done configuring firewall"
 
