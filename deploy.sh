@@ -1,5 +1,16 @@
 ﻿#!/bin/sh
 
+echo "Doing security stuff – remember to set a safe password!"
+echo "                     --> passwd pi"
+sleep 2;
+
+sudo iptables -F
+sudo iptables -P INPUT DROP
+sudo iptables -A INPUT -s 134.60.0.0/16 -p tcp -j ACCEPT
+sudo iptables -A INPUT -s 134.60.0.0/16 -p icmp -j ACCEPT
+
+echo "Done configuring firewall"
+
 echo "installing stuff"
 sudo apt-get update
 sudo apt-get install -qy iw tcpdump ifrename hostapd
