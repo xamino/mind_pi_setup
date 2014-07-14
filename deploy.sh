@@ -5,10 +5,18 @@ echo "                     --> passwd pi"
 sleep 2;
 
 sudo iptables -F
+# default drop
 sudo iptables -P INPUT DROP
-sudo iptables -A INPUT -s 134.60.0.0/16 -p tcp -j ACCEPT
-sudo iptables -A INPUT -s 134.60.0.0/16 -p udp -j ACCEPT
-sudo iptables -A INPUT -s 134.60.0.0/16 -p icmp -j ACCEPT
+# Allow unlimited traffic on loopback
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A OUTPUT -o lo -j ACCEPT
+# allow incoming ssh
+sudo iptables -A INPUT -p tcp -s 134.60.0.0/16 --sport 513:65535 --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+# also accept everything from uni-ulm.de
+sudo iptables -A INPUT -s 134.60.0.0/16 -p tcp -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -s 134.60.0.0/16 -p udp -m state --state NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -s 134.60.0.0/16 -p icmp -m state --state NEW,ESTABLISHED -j ACCEPT
+
 sudo bash -c 'iptables-save > /etc/network/iptables'
 
 echo "Done configuring firewall"
