@@ -12,6 +12,8 @@ sudo iptables -P INPUT REJECT
 sudo iptables -A INPUT -s 134.60.0.0/16 -p tcp -j ACCEPT
 sudo iptables -A INPUT -s 134.60.0.0/16 -p udp -j ACCEPT
 sudo iptables -A INPUT -s 134.60.0.0/16 -p icmp -j ACCEPT
+# IMPORTANT: allow connections from self-initiated contacts
+sudo iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT
 # allow all output
 sudo iptables -A OUTPUT -j ACCEPT
 # save configuration for reboot
