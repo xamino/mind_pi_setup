@@ -2,11 +2,11 @@
 while true; do
         if ! [ "`ping -c 1 uni-ulm.de`" ]; then #if ping exits nonzero...
                 killall dhclient
-		ifconfig wlan1 down
-		ifconfig wlan1 up
-		dhclient -1 -nw wlan1
-		sleep 10     #give it a few seconds to complete
-	fi
+        		ifconfig wlan1 down
+		        ifconfig wlan1 up
+        		dhclient -1 -nw wlan1
+        		sleep 10     #give it a few seconds to complete
+    	fi
         sleep 5 #check again in five seconds
 done
 
