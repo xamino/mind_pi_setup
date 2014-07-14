@@ -65,6 +65,12 @@ sudo cp xinitrc /etc/X11/xinit/xinitrc
 # disable screensaver (try 3)
 sudo cp config /etc/kbd/config
 
+#set time settings
+echo "Setting time stuff"
+sudo systemctl enable ntpd
+sudo systemctl enable ntpdate
+sudo systemctl disable hwclock
+
 # reboot
 echo "reboot!"
 sudo reboot
