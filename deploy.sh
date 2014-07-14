@@ -68,8 +68,10 @@ sudo cp xinitrc /etc/X11/xinit/xinitrc
 # disable screensaver (try 3)
 sudo cp config /etc/kbd/config
 
-#set time settings
-echo "Setting cron job"
+#set time settings and cronjob
+echo "Setting time and cron job"
+sudo cp timezone /etc/timezone
+sudo dpkg-reconfigure -f noninteractive tzdata
 sudo cp pi /var/spool/cron/crontabs/pi
 
 # reboot
