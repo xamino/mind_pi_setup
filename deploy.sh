@@ -69,10 +69,8 @@ sudo cp xinitrc /etc/X11/xinit/xinitrc
 sudo cp config /etc/kbd/config
 
 #set time settings
-echo "Setting time stuff"
-sudo systemctl enable ntpd
-sudo systemctl enable ntpdate
-sudo systemctl disable hwclock
+echo "Setting cron job"
+sudo cp pi /var/spool/cron/crontabs/pi
 
 # reboot
 echo "reboot!"
